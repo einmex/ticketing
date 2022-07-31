@@ -1,0 +1,1 @@
+export const OrderExpired = () => <p>Sorry, but order has expired!</p>
