@@ -5,6 +5,7 @@ import { app } from './app';
 
 //from auth-mongo-depl
 const start = async () => {
+  console.log('Starting up...');
   if (!process.env.JWT_KEY) {
     throw new Error('env secret must be defined');
   }
