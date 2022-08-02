@@ -11,7 +11,6 @@ import { errorHandler, NotFoundError } from '@einmex-org/common-auth';
 
 const app = express();
 app.set('trust proxy', true);
-
 app.use(json());
 
 app.use(
