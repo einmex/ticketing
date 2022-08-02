@@ -1,9 +1,9 @@
-name: Deploy-auth
+name: deploy-auth
 
 on:
   push:
     branches:
-      - "main"
+      - main
     paths:
       - 'auth/**'
 
@@ -11,11 +11,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps: 
-    - name: Build docker image
     - uses: actions/checkout@v3
-    - run: |
-        cd auth && docker build -t einmex/auth .
-        docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+    - run: cd auth && docker build -t einmex/auth .
+    - run: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       env:
         DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
         DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
