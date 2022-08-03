@@ -23,7 +23,7 @@ const LandingPage = (
 
   return (
     <>
-      <h1>Tickets</h1>
+      <h2>Tickets</h2>
       <div>
         <table className="table">
           <thead>

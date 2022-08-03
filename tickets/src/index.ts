@@ -8,6 +8,7 @@ import { OrderCancelledListener } from './events/listeners/order-cancelled-liste
 
 //from auth-mongo-depl
 const start = async () => {
+  console.log('Starting...');
   if (!process.env.JWT_KEY) {
     throw new Error('env secret must be defined');
   }
